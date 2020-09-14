@@ -34,7 +34,7 @@ const History: React.FC = () => {
                     <span>Voltar</span>
                 </div>
             </Link>
-            <h2 className="title">Seus últimos cálculos fatorais.</h2>
+            <h2 className="title">Seus últimos cálculos fatoriais.</h2>
 
             {
                 resultsHistory.length > 0 &&
