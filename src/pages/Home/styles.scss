@@ -30,4 +30,26 @@ nav a {
     color: var(--primaryColor);
     font-size: var(--textFontSize);
     text-decoration: none;
+    position: absolute;
+    bottom: 50px;
+}
+
+@media (min-width: 1000px) {
+    nav a {
+        bottom: 20px;
+    }
+
+    form {
+        flex-direction: row;
+
+        input {
+            width: 100%;
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 0px;
+            min-width: 100px;
+        }
+    }
 }

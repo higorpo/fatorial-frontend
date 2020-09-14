@@ -15,6 +15,19 @@ html, body, #root {
 	height: 100%;
 }
 
+header {
+	display: none;
+}
+
+div.router {
+	display: flex;
+	flex-direction: column;
+
+	img {
+		margin-top: 50px;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	&.title {
 		font-style: normal;
@@ -43,4 +56,63 @@ div.container {
 	flex-direction: column;
 	padding: 50px 30px;
 	height: calc(100% - 100px);
+}
+
+@media (min-width: 1000px) {
+	#root {
+		display: flex;
+		flex-direction: row;	
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		background-color: var(--primaryColor);
+		color: white;
+		min-width: 35%;
+		position: relative;
+		z-index: 1;
+		margin-right: 50px;
+		padding-left: 40px;
+
+		&::before {
+			content: '';
+			background-color: var(--primaryColor);
+			position: absolute;
+			width: 300px;
+			height: calc(100% + 10px);
+			top: -20px;
+			right: -25px;
+			transform: rotate(4deg);
+			z-index: -1;
+		}
+		
+		img {
+			margin-top: auto;
+		}
+
+		h1.title {
+			color: white;
+			margin-top: 20px;
+		}
+
+		p.author {
+			margin-top: auto;
+		}
+	}
+
+	div.router {
+		img {
+			display: none;
+		}
+	}
+
+	div.container {
+		justify-content: center;
+		padding: 0px 60px;
+		height: 100%;
+	}
 }
