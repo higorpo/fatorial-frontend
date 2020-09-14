@@ -1,0 +1,59 @@
+#history-page {
+    justify-content: normal;
+    margin: 50px 0px;
+    height: auto;
+    width: auto;
+}
+
+
+a {
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    > div.back {
+        color: var(--primaryColor);
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 5px;
+            text-transform: uppercase;
+            font-size: var(--textFontSize);
+            font-weight: bold;
+        }
+    }
+}
+
+ul.history {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    li.history-item {
+        color: var(--grey3);
+        background-color: var(--grey6);
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span.factorial {
+            font-weight: bold;
+            font-size: 48px;
+
+            &:after {
+                content: "!";
+            }
+        }
+
+        span.result {
+            font-size: 30px;
+            
+            &:before {
+                content: "= ";
+            }
+        }
+    }
+}
