@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	&.explanation {
 		font-weight: normal;
 		font-size: var(--textFontSize);
-		line-height: calc(--textFontSize + 3px);
+		line-height: calc(var(--textFontSize) + 3px);
 		color: var(--grey3);
 		margin: 0px;
 		margin-bottom: 20px;
