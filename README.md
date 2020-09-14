@@ -83,7 +83,7 @@ Depois de executado o comando acima, execute ```cd ..```
 
 ---
 
-#####Java
+##### Java
 
 Clone o repositório
 ```sh 
@@ -93,7 +93,7 @@ git clone https://github.com/higorpo/fatorial-backend-java backend
 ### Executando o backend
 Siga o tutorial do backend que você baixou acima (Node.js ou Java)
 
-#####Node.js
+##### Node.js
 ```sh 
 cd backend
 yarn dev
@@ -102,7 +102,7 @@ Depois de executado o comando acima, execute ```cd ..```
 
 ---
 
-#####Java
+##### Java
 
 ```sh 
 cd backend
