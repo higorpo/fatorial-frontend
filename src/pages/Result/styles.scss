@@ -1,3 +1,10 @@
+#result-page {
+    justify-content: normal;
+    margin: 50px 0px;
+    height: auto;
+    width: auto;
+}
+
 div.factorial-result {
     background-color: var(--grey6);
     padding: 20px;
@@ -8,6 +15,7 @@ div.factorial-result {
         margin: 0px;
         line-height: 45px;
         color: var(--grey1);
+        word-break: break-all;
     }
 
     p.multipliers {
