@@ -41,7 +41,11 @@ Para o frontend desta aplicação utilizou-se das seguintes tecnologias:
 O site foi construído com base na minha prototipagem no Figma, que pode ser conferida <a href="" target="_blank">clicando aqui</a>.
 </p>
 <p>Do desenvolvimento desse, chegou-se ao seguinte resultado:</p>
-<iframe src="https://drive.google.com/file/d/1xHrablhJW5Jk2HBlKEkrrTGFNX5wgXO0/preview" width="640" height="480"></iframe>
+
+Clique na foto abaixo para ver o vídeo de demonstração do site:
+[![Assista ao video](https://lh6.googleusercontent.com/Q5lMf3oBeZ6QT5qX3Z4z9uYr5VgMcI8GMYY8Kh44N0Kz1QqLSG0l7-AYBqYNHwWj2N20BxLU-q6k0RAGJJwK=w1280-h720-k-rw-pd)](https://drive.google.com/file/d/1xHrablhJW5Jk2HBlKEkrrTGFNX5wgXO0/view)
+
+
 <p>Você pode testar a aplicação agora mesmo através <a href="https://fatorial.vercel.app/" target="_blank">deste link</a>, uma versão do site hospedada na <b>Vercel</b>.</p>
 
 
