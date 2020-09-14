@@ -13,6 +13,7 @@ ul.history {
     margin: 0px;
 
     li.history-item {
+        cursor: pointer;
         color: var(--grey3);
         background-color: var(--grey6);
         width: 100%;
@@ -33,7 +34,11 @@ ul.history {
 
         span.result {
             font-size: 30px;
-
+            max-width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            
             &:before {
                 content: "= ";
             }

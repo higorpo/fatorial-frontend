@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { MdRefresh } from 'react-icons/md';
 import { Link, useLocation } from 'react-router-dom';
 import api from '../../config/api';
+import { FactorialResults } from '../History';
 
 import './styles.scss';
 
@@ -29,6 +30,8 @@ const Result: React.FC = () => {
                     const { result } = await response.json();
                     setFactorialResult(result);
                     setLoading(false);
+
+                    saveCalculatedNumberInHistory(result)
                 } else {
                     const { errors } = await response.json();
                     setErrors(errors[0].msg);
@@ -55,6 +58,39 @@ const Result: React.FC = () => {
             return `${factorialNumber} x ${factorialNumber - 1} x ${factorialNumber - 3} x ... x 3 x 2 x 1 =`
         }
     }, [factorialNumber]);
+
+    function saveCalculatedNumberInHistory(result: string) {
+        const storageCalculatedNumbers = localStorage.getItem('calculatedNumbers');
+        const storageFactorialResults = localStorage.getItem('factorialResults');
+        let calculatedNumbers: Array<number> = [];
+        let factorialResults: Array<FactorialResults> = [];
+
+        if (storageCalculatedNumbers) {
+            calculatedNumbers = JSON.parse(storageCalculatedNumbers);
+        }
+
+        if (storageFactorialResults) {
+            factorialResults = JSON.parse(storageFactorialResults);
+        }
+
+        // Verifica se o número já está salvo no histórico
+        if (calculatedNumbers.includes(factorialNumber)) {
+            // Já está salvo no histórico, deleta
+            calculatedNumbers = calculatedNumbers.filter(number => number !== factorialNumber);
+            factorialResults = factorialResults.filter(fResult => fResult.factorial !== factorialNumber);
+        }
+
+        // Salva no histórico
+        calculatedNumbers.unshift(factorialNumber);
+        factorialResults.unshift({
+            factorial: factorialNumber,
+            result: result
+        })
+
+        localStorage.setItem('calculatedNumbers', JSON.stringify(calculatedNumbers));
+        localStorage.setItem('factorialResults', JSON.stringify(factorialResults));
+    }
+
 
     if (!factorialNumber) {
         return null;

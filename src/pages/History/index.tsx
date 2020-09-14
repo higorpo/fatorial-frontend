@@ -1,10 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { MdArrowBack } from 'react-icons/md';
 
 import './styles.scss';
 
+export interface FactorialResults {
+    factorial: number,
+    result: string
+}
+
 const History: React.FC = () => {
+    const history = useHistory();
+
+    const [resultsHistory, setResultsHistory] = useState<Array<FactorialResults>>([]);
+
+    useEffect(() => {
+        const storageFactorialResults = localStorage.getItem('factorialResults');
+
+        if (storageFactorialResults) {
+            setResultsHistory(JSON.parse(storageFactorialResults));
+        }
+    }, []);
+
+    function handleClickHistoryItem(factorial: number) {
+        history.push(`/calc?factorial=${factorial}`);
+    }
+
     return (
         <div id="history-page" className="container">
             <Link to="/" className="back-button">
@@ -16,13 +37,13 @@ const History: React.FC = () => {
             <h2 className="title">Seus últimos cálculos fatorais.</h2>
 
             {
-                false &&
+                resultsHistory.length > 0 &&
                 <ul className="history">
                     {
-                        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map((item) => (
-                            <li key={String(item)} className="history-item">
-                                <span className="factorial">14</span>
-                                <span className="result">9823823</span>
+                        resultsHistory.map((history) => (
+                            <li key={String(history.factorial)} className="history-item" onClick={() => handleClickHistoryItem(history.factorial)}>
+                                <span className="factorial">{history.factorial}</span>
+                                <span className="result">{history.result}</span>
                             </li>
                         ))
                     }
@@ -30,7 +51,7 @@ const History: React.FC = () => {
             }
 
             {
-                true &&
+                resultsHistory.length === 0 &&
                 <p>
                     Você ainda não realizou nenhum cálculo.
                 </p>
