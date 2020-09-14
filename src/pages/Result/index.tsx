@@ -16,7 +16,7 @@ const Result: React.FC = () => {
         if (factorialNumber <= 20) {
             let string = "";
             for (let i = factorialNumber; i > 0; i--) {
-                if (i == 1) {
+                if (i === 1) {
                     string += `${i} = `;
                 } else {
                     string += `${i} x `;
