@@ -1,0 +1,46 @@
+:root {
+	--primaryColor: #A70000;
+	--grey3: #828282;
+	--grey6: #F2F2F2;
+
+	--titleFontSize: 30px;
+	--textFontSize: 16px;
+}
+
+body {
+	font-family: Roboto, Arial;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&.title {
+		font-style: normal;
+		font-weight: 900;
+		font-size: var(--titleFontSize);
+		line-height: calc(var(--titleFontSize) + 7px);
+		color: var(--primaryColor);
+		margin: 0px;
+		margin-bottom: 20px;
+		max-width: 400px;
+	}
+
+	&.explanation {
+		font-weight: normal;
+		font-size: var(--textFontSize);
+		line-height: calc(--textFontSize + 3px);
+		color: var(--grey3);
+		margin: 0px;
+		margin-bottom: 20px;
+		max-width: 95%;
+	}
+}
+
+div.container {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 30px;
+	height: calc(100% - 100px);
+}

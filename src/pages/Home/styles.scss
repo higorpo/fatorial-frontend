@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+    
+    input {
+        border: 0px;
+        outline: none;
+        background: var(--grey6);
+        border-bottom: 3.5px solid var(--primaryColor);
+        font-size: calc(var(--textFontSize) * 1.5);
+        padding: 20px 20px;
+    }
+
+    button {
+        margin-top: 20px;
+        background: var(--primaryColor);
+        color: white;
+        font-size: 50px;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100px;
+        margin-left: auto;
+    }
+}
+
+nav a {
+    color: var(--primaryColor);
+    font-size: var(--textFontSize);
+    text-decoration: none;
+}
