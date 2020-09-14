@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <div className="container">
             <hgroup>
                 <h2 className="title">Digite um número para calcular sua fatorial.</h2>
-                <h6 className="explanation">Digite um número entre 1 a 150 para calcular o seu valor fatorial de maneira simples e rápida. Seus cálculos ficarão salvos para que você possa consultá-los no futuro.</h6>
+                <h6 className="explanation">Digite um número para calcular o seu valor fatorial de maneira simples e rápida. Seus cálculos ficarão salvos para que você possa consultá-los no futuro.</h6>
             </hgroup>
 
             <form onSubmit={handleSubmitForm}>
