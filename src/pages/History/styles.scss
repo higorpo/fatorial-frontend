@@ -6,23 +6,6 @@
 }
 
 
-a {
-    text-decoration: none;
-    margin-bottom: 20px;
-
-    > div.back {
-        color: var(--primaryColor);
-        display: flex;
-        align-items: center;
-
-        span {
-            margin-left: 5px;
-            text-transform: uppercase;
-            font-size: var(--textFontSize);
-            font-weight: bold;
-        }
-    }
-}
 
 ul.history {
     list-style: none;
@@ -50,7 +33,7 @@ ul.history {
 
         span.result {
             font-size: 30px;
-            
+
             &:before {
                 content: "= ";
             }

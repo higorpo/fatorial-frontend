@@ -4,6 +4,7 @@ import { AiFillHeart } from 'react-icons/ai'
 
 import Home from './Home';
 import History from './History';
+import Result from './Result';
 
 import Logo from '../assets/logo.svg';
 import LogoColored from '../assets/logo-colored.svg';
@@ -28,6 +29,7 @@ const Routes: React.FC = () => {
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/history" component={History} />
+                    <Route path="/calc" component={Result} />
                 </Switch>
             </div>
         </BrowserRouter>

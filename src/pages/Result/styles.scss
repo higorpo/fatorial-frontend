@@ -1,0 +1,22 @@
+div.factorial-result {
+    background-color: var(--grey6);
+    padding: 20px;
+
+    h4.result {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0px;
+        line-height: 45px;
+        color: var(--grey1);
+    }
+
+    p.multipliers {
+        color: var(--grey3);
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+}
+
+a.back-button {
+    margin-top: 20px;
+}

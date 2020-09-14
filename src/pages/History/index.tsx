@@ -7,8 +7,8 @@ import './styles.scss';
 const History: React.FC = () => {
     return (
         <div id="history-page" className="container">
-            <Link to="/">
-                <div className="back">
+            <Link to="/" className="back-button">
+                <div>
                     <MdArrowBack size={22} />
                     <span>Voltar</span>
                 </div>
