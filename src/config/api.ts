@@ -1,3 +1,3 @@
 export default {
-    baseURL: 'http://localhost:8000'
+    baseURL: 'https://fatorial.herokuapp.com'
 }
